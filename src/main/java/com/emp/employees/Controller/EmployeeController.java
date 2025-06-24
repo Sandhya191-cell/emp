@@ -41,7 +41,7 @@ public class EmployeeController {
     }
     
     @PutMapping("/{id}")
-    public Employee updateEmp(@PathVariable Long id,Employee emp) {
+    public Employee updateEmp(@PathVariable Long id, @RequestBody Employee emp) {
     	return empserv.updateEmployee(id, emp);
     }
     
